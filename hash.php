@@ -29,16 +29,17 @@ function habit_unhash($string){
 	$next = '';
 	$word = '';
 
-	while()
+	while($hash >= 0)
 	{
-		$h = 0;
 		$remainder = 0;
 
-		$next = ($hash / 37);
+		$next = (int)($hash / 37);
 		$remainder = ($hash % 37);
 
-		if($remainder >= 0)
+		if($next >= 0)
 		{
+			$word .= substr($letters, $remainder, 1);
+			$hash = $next;
 
 		}
 		else{
